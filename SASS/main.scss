@@ -1,1 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto+Mono:wght@300;400&display=swap");
+
+@import "variables";
 @import "reset";
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $gradientSeven;
+}
+.container {
+  width: 95vw;
+  max-width: 700px;
+  border: 4px solid $clrThree;
+  padding: 2rem;
+  border-radius: 4px;
+  background: $gradientEleven;
+  color: white;
+  box-shadow: 0 4px 10px $clrDarkGrey;
+
+  h1 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 1.85rem;
+  }
+  .password-display {
+    padding: 1rem;
+    width: 90%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto 1.5rem auto;
+    border-radius: 2px;
+    font-family: "roboto mono", monospace;
+    color: #333;
+  }
+
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .length {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      margin-bottom: 0.8rem;
+      font-size: 1.06rem;
+
+      .select-length {
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
+
+        #character-amount-number {
+          width: 2.2rem;
+          margin-left: 3px;
+        }
+      }
+    }
+    .options {
+      width: 90%;
+    }
+    .options > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+    }
+    label {
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    .btn {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 3px;
+      border: 0;
+      outline: none;
+      background: $gradientFifteen;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 20px;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(0.99);
+        color: $clrLightGrey;
+      }
+    }
+  }
+}
