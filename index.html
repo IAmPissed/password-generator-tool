@@ -12,37 +12,45 @@
     <section>
       <div class="container">
         <h1>Password Generator</h1>
-        <h2>password</h2>
+        <div class="password-display">password</div>
 
         <form class="form">
-          <div>
+          <div class="length">
             <label for="character-amount-number">Number of Characters</label>
-            <input
-              id="character-amount-range"
-              type="range"
-              value="8"
-              max="20"
-              min="8"
-            />
-            <input
-              id="character-amount-number"
-              type="number"
-              value="8"
-              max="20"
-              min="8"
-            />
+            <div class="select-length">
+              <input
+                id="character-amount-range"
+                type="range"
+                value="8"
+                max="20"
+                min="8"
+              />
+              <input
+                id="character-amount-number"
+                type="number"
+                value="8"
+                max="20"
+                min="8"
+              />
+            </div>
           </div>
 
-          <label for="uppercase-chars">Include UpperCase Letters</label>
-          <input type="checkbox" id="uppercase-chars" />
+          <div class="options">
+            <div class="uppercase-container">
+              <label for="uppercase-chars">Include UpperCase Letters</label>
+              <input type="checkbox" id="uppercase-chars" />
+            </div>
+            <div class="numbers-container">
+              <label for="numbers">Include Numbers</label>
+              <input type="checkbox" id="numbers" />
+            </div>
+            <div class="special-chars-container">
+              <label for="special-chars">Include Special Characters</label>
+              <input type="checkbox" id="special-chars" />
+            </div>
 
-          <label for="numbers">Include Numbers</label>
-          <input type="checkbox" id="numbers" />
-
-          <label for="special-chars">Include Special Characters</label>
-          <input type="checkbox" id="special-chars" />
-
-          <button type="submit">Generate Password</button>
+            <button type="submit" class="btn">Generate Password</button>
+          </div>
         </form>
       </div>
     </section>
