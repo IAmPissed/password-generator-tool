@@ -28,7 +28,6 @@ body {
     font-size: 1.85rem;
   }
   .password-display {
-    padding: 1rem;
     width: 90%;
     background: white;
     display: flex;
@@ -36,8 +35,47 @@ body {
     justify-content: center;
     margin: 1rem auto 1.5rem auto;
     border-radius: 2px;
-    font-family: "roboto mono", monospace;
     color: #333;
+    position: relative;
+
+    .password {
+      height: 100%;
+      width: 100%;
+      padding: 1rem 2.85rem 1rem 1rem;
+      border: 0;
+      outline: none;
+      font-family: "roboto mono", monospace;
+      text-align: center;
+      font-size: 1.25rem;
+      border-radius: 3px;
+    }
+
+    .clipboard {
+      position: absolute;
+      right: 0%;
+      bottom: 0%;
+      height: 100%;
+      width: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background-color: $clrFive;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+
+      .bi-clipboard-plus {
+        color: $clrDarkGrey;
+        font-size: 1.25rem;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        padding: 0.82rem;
+
+        &:hover {
+          color: $clrTwo;
+        }
+      }
+    }
   }
 
   .form {

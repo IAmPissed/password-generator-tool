@@ -62,7 +62,6 @@ body {
 }
 
 .container .password-display {
-  padding: 1rem;
   width: 90%;
   background: white;
   display: -webkit-box;
@@ -76,8 +75,53 @@ body {
           justify-content: center;
   margin: 1rem auto 1.5rem auto;
   border-radius: 2px;
-  font-family: "roboto mono", monospace;
   color: #333;
+  position: relative;
+}
+
+.container .password-display .password {
+  height: 100%;
+  width: 100%;
+  padding: 1rem 2.85rem 1rem 1rem;
+  border: 0;
+  outline: none;
+  font-family: "roboto mono", monospace;
+  text-align: center;
+  font-size: 1.25rem;
+  border-radius: 3px;
+}
+
+.container .password-display .clipboard {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  height: 100%;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  background-color: #bdffed;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.container .password-display .clipboard .bi-clipboard-plus {
+  color: #525252;
+  font-size: 1.25rem;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  padding: 0.82rem;
+}
+
+.container .password-display .clipboard .bi-clipboard-plus:hover {
+  color: #ffb3d5;
 }
 
 .container .form {
