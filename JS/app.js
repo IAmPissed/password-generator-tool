@@ -93,10 +93,12 @@ function getCharacters(from, to) {
 
 
 const clipboard = document.querySelector('[data-clipboard]')
+const tooltip = document.querySelector('[data-tooltip]');
 
 
 clipboard.addEventListener('click', e => {
     let copyPassoword = passwordDisplay.value;
-
+    if (copyPassoword === '') return;
     navigator.clipboard.writeText(copyPassoword)
+    console.log(tooltip.classList);
 })
