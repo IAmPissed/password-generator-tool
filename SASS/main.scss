@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem auto 1.5rem auto;
+    margin: 1rem auto 2.3rem auto;
     border-radius: 2px;
     color: #333;
     position: relative;
@@ -57,44 +57,21 @@
       border-top-right-radius: 2px;
       border-bottom-right-radius: 2px;
     }
+    .clipboard:hover > i {
+      color: $clrTwo;
+      font-size: 1.4rem;
+    }
 
     .bi-clipboard-plus {
       color: $clrDarkGrey;
       font-size: 1.25rem;
       border-top-right-radius: 2px;
       border-bottom-right-radius: 2px;
-      padding: 0.82rem;
+      pointer-events: none;
 
-      &:hover {
-        color: $clrTwo;
-      }
-    }
-
-    .clipboard::after,
-    .clipboard::before {
-      position: absolute;
-      bottom: -0.35rem;
-      transform: translateY(100%) scale(0);
-      transition: 75ms transform;
-      transform-origin: top center;
-    }
-    .clipboard::before {
-      content: attr(data-tooltip);
-      width: max-content;
-      background-color: #fff;
-      max-width: 100%;
-      padding: 0.4rem;
-      color: #333;
-      font-size: 0.75rem;
-      border-radius: 3px;
-      text-align: center;
-      letter-spacing: 1px;
-    }
-    .clipboard::after {
-      content: "";
-      border: 10px solid transparent;
-      border-bottom-color: #fff;
-      transform: translateY(0.1rem) scale(0);
+      // &:hover {
+      //   color: $clrTwo;
+      // }
     }
   }
 }
@@ -173,6 +150,11 @@
 
       .clipboard {
         width: 3rem;
+
+        &::before {
+          font-size: 0.48rem;
+          padding: 0.4rem 0.4rem;
+        }
       }
     }
   }
