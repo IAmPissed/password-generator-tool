@@ -2,15 +2,8 @@
 
 @import "variables";
 @import "reset";
+@import "utilities";
 
-body {
-  font-family: "Poppins", sans-serif;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: $gradientSeven;
-}
 .container {
   width: 95vw;
   max-width: 700px;
@@ -41,7 +34,7 @@ body {
     .password {
       height: 100%;
       width: 100%;
-      padding: 1rem 2.85rem 1rem 1rem;
+      padding: 1rem 4.25rem 1rem 1rem;
       border: 0;
       outline: none;
       font-family: "roboto mono", monospace;
@@ -55,7 +48,7 @@ body {
       right: 0%;
       bottom: 0%;
       height: 100%;
-      width: 3rem;
+      width: 4rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -63,74 +56,123 @@ body {
       background-color: $clrFive;
       border-top-right-radius: 2px;
       border-bottom-right-radius: 2px;
+    }
 
-      .bi-clipboard-plus {
-        color: $clrDarkGrey;
-        font-size: 1.25rem;
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 2px;
-        padding: 0.82rem;
+    .bi-clipboard-plus {
+      color: $clrDarkGrey;
+      font-size: 1.25rem;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+      padding: 0.82rem;
 
-        &:hover {
-          color: $clrTwo;
-        }
+      &:hover {
+        color: $clrTwo;
+      }
+    }
+
+    .clipboard::after,
+    .clipboard::before {
+      position: absolute;
+      bottom: -0.35rem;
+      transform: translateY(100%) scale(0);
+      transition: 75ms transform;
+      transform-origin: top center;
+    }
+    .clipboard::before {
+      content: attr(data-tooltip);
+      width: max-content;
+      background-color: #fff;
+      max-width: 100%;
+      padding: 0.4rem;
+      color: #333;
+      font-size: 0.75rem;
+      border-radius: 3px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .clipboard::after {
+      content: "";
+      border: 10px solid transparent;
+      border-bottom-color: #fff;
+      transform: translateY(0.1rem) scale(0);
+    }
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .length {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-bottom: 0.8rem;
+    font-size: 1.06rem;
+
+    .select-length {
+      display: flex;
+      align-items: center;
+      margin-left: 1rem;
+
+      #character-amount-number {
+        width: 2.2rem;
+        margin-left: 3px;
       }
     }
   }
-
-  .form {
+  .options {
+    width: 90%;
+  }
+  .options > div {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+  }
+  label {
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  .btn {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 3px;
+    border: 0;
+    outline: none;
+    background: $gradientFifteen;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(0.99);
+      color: $clrLightGrey;
+    }
+  }
+}
+
+@media screen and(max-width:600px) {
+  .length {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+  }
 
-    .length {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 90%;
-      margin-bottom: 0.8rem;
-      font-size: 1.06rem;
-
-      .select-length {
-        display: flex;
-        align-items: center;
-        margin-left: 1rem;
-
-        #character-amount-number {
-          width: 2.2rem;
-          margin-left: 3px;
-        }
+  .container {
+    .password-display {
+      .password {
+        font-size: x-small;
+        padding: 1rem 3.25rem 1rem 1rem;
       }
-    }
-    .options {
-      width: 90%;
-    }
-    .options > div {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 0.6rem;
-    }
-    label {
-      font-weight: 500;
-      letter-spacing: 1px;
-    }
-    .btn {
-      width: 100%;
-      padding: 0.5rem;
-      border-radius: 3px;
-      border: 0;
-      outline: none;
-      background: $gradientFifteen;
-      font-weight: bold;
-      letter-spacing: 1px;
-      font-size: 20px;
-      cursor: pointer;
 
-      &:hover {
-        transform: scale(0.99);
-        color: $clrLightGrey;
+      .clipboard {
+        width: 3rem;
       }
     }
   }
