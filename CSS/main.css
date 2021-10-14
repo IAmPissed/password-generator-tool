@@ -235,11 +235,11 @@ body {
             align-items: center;
   }
   .container .password-display .password {
-    font-size: x-small;
-    padding: 1rem 3.25rem 1rem 1rem;
+    font-size: small;
+    padding: 1rem 3rem 1rem 0.5rem;
   }
   .container .password-display .clipboard {
-    width: 3rem;
+    width: 2.8rem;
   }
   .container .password-display .clipboard::before {
     font-size: 0.48rem;
