@@ -68,10 +68,6 @@
       border-top-right-radius: 2px;
       border-bottom-right-radius: 2px;
       pointer-events: none;
-
-      // &:hover {
-      //   color: $clrTwo;
-      // }
     }
   }
 }
@@ -150,11 +146,6 @@
 
       .clipboard {
         width: 2.8rem;
-
-        &::before {
-          font-size: 0.48rem;
-          padding: 0.4rem 0.4rem;
-        }
       }
     }
   }

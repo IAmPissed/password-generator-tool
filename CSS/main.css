@@ -241,8 +241,4 @@ body {
   .container .password-display .clipboard {
     width: 2.8rem;
   }
-  .container .password-display .clipboard::before {
-    font-size: 0.48rem;
-    padding: 0.4rem 0.4rem;
-  }
 }

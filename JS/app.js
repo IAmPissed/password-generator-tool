@@ -15,7 +15,6 @@
 // Create copy to clipboard functionality
 // grab clipboard element
 
-
 const passwordDisplay = document.querySelector('[data-password-display]');
 const form = document.querySelector('[data-form]');
 const includeUppercase = document.querySelector('[data-uppercase-chars]');
@@ -24,6 +23,8 @@ const includeSpecialChars = document.querySelector('[data-special-chars]');
 
 const numberOfCharacters = document.querySelector('[data-length-number]');
 const rangeOfCharacters = document.querySelector('[data-length-range]');
+
+const clipboard = document.querySelector('[data-clipboard]')
 
 
 numberOfCharacters.addEventListener('input', syncLength);
@@ -75,6 +76,7 @@ function generatePassword(length, uppercase, number, special) {
         let charCode = charCodes[Math.floor(Math.random() * charCodes.length)];
         passwordCharacters.push(String.fromCharCode(charCode));
     }
+
     return passwordCharacters.join('')
 }
 
@@ -92,11 +94,11 @@ function getCharacters(from, to) {
 }
 
 
-const clipboard = document.querySelector('[data-clipboard]')
-const tooltip = document.querySelector('[data-tooltip]');
+
 
 clipboard.addEventListener('click', e => {
     let Passoword = passwordDisplay.value;
     if (Passoword === '') return;
-    navigator.clipboard.writeText(Passoword)
+    navigator.clipboard.writeText(Passoword);
 })
+
