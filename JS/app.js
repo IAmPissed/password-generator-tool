@@ -12,8 +12,12 @@
 // it should take incule special characters X
 // create a function to get character codes and store them in an array X
 // get the uppercase, lowercase, numbers,and special characters using the above function X
-// Create copy to clipboard functionality
-// grab clipboard element
+// Create copy to clipboard functionality X
+// grab clipboard element X
+
+
+// reference to increase and decrease buttons
+// create a function to increase or decrease the value of character amount number based on the button that is clicked
 
 const passwordDisplay = document.querySelector('[data-password-display]');
 const form = document.querySelector('[data-form]');
@@ -25,6 +29,27 @@ const numberOfCharacters = document.querySelector('[data-length-number]');
 const rangeOfCharacters = document.querySelector('[data-length-range]');
 
 const clipboard = document.querySelector('[data-clipboard]')
+
+const increaseBtn = document.querySelector('[data-increase-btn]');
+const decreaseBtn = document.querySelector('[data-decrease-btn]');
+
+
+increaseBtn.addEventListener('click', increaseCharAmount);
+decreaseBtn.addEventListener('click', decreaseCharAmount);
+
+function increaseCharAmount() {
+    if (numberOfCharacters.value < 20) {
+        numberOfCharacters.value++;
+    }
+    document.getElementById('character-amount-range').value++
+}
+
+function decreaseCharAmount() {
+    if (numberOfCharacters.value > 8) {
+        numberOfCharacters.value--;
+    }
+    document.getElementById('character-amount-range').value--
+}
 
 
 numberOfCharacters.addEventListener('input', syncLength);

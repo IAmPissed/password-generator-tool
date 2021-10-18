@@ -7,3 +7,13 @@ body {
   align-items: center;
   background: $gradientSeven;
 }
+
+.spinner-btn {
+  background-color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-family: "Roboto mono", monospace;
+}

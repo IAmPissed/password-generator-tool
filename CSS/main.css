@@ -46,6 +46,16 @@ body {
   background: linear-gradient(to right, #bbd2c5, #536976);
 }
 
+.spinner-btn {
+  background-color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-family: "Roboto mono", monospace;
+}
+
 .container {
   width: 95vw;
   max-width: 700px;
@@ -172,8 +182,45 @@ body {
 }
 
 .form .length .select-length #character-amount-number {
-  width: 2.2rem;
-  margin-left: 3px;
+  text-align: center;
+  padding: 0.25rem 0.1rem;
+  border: none;
+  outline: none;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+  width: 1.5rem;
+}
+
+.form .length .select-length #character-amount-number::-webkit-inner-spin-button, .form .length .select-length #character-amount-number::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+.form .length .select-length .number-input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 0.5rem;
+}
+
+.form .length .select-length .number-input-container #decrease {
+  color: #ff193c;
+  border-radius: 0 25px 25px 0;
+  padding: 0.25rem 0.75rem 0.25rem 0.25rem;
+}
+
+.form .length .select-length .number-input-container #decrease:hover, .form .length .select-length .number-input-container #decrease:focus {
+  font-weight: bold;
+}
+
+.form .length .select-length .number-input-container #increase {
+  color: #2e6dff;
+  border-radius: 25px 0 0 25px;
+  padding: 0.25rem 0.25rem 0.25rem 0.75rem;
+}
+
+.form .length .select-length .number-input-container #increase:hover, .form .length .select-length .number-input-container #increase:focus {
+  font-weight: bold;
 }
 
 .form .options {

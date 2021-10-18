@@ -35,14 +35,33 @@
                 min="8"
                 data-length-range
               />
-              <input
-                id="character-amount-number"
-                type="number"
-                value="8"
-                max="20"
-                min="8"
-                data-length-number
-              />
+              <div class="number-input-container">
+                <button
+                  type="button"
+                  class="spinner-btn"
+                  id="increase"
+                  data-increase-btn
+                >
+                  &plus;
+                </button>
+                <input
+                  id="character-amount-number"
+                  type="number"
+                  value="8"
+                  max="20"
+                  min="8"
+                  data-length-number
+                  readonly
+                />
+                <button
+                  type="button"
+                  class="spinner-btn"
+                  id="decrease"
+                  data-decrease-btn
+                >
+                  &minus;
+                </button>
+              </div>
             </div>
           </div>
 
