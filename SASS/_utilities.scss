@@ -17,3 +17,9 @@ body {
   cursor: pointer;
   font-family: "Roboto mono", monospace;
 }
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

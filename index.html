@@ -16,17 +16,17 @@
     <section>
       <div class="container">
         <h1>Password Generator</h1>
-        <div class="password-display">
+        <div class="password-display flex">
           <input type="text" class="password" readonly data-password-display />
-          <div class="clipboard" data-clipboard>
+          <div class="clipboard flex" data-clipboard>
             <i class="bi bi-clipboard-plus"></i>
           </div>
         </div>
 
-        <form class="form" data-form>
-          <div class="length">
+        <form class="form flex" data-form>
+          <div class="length flex">
             <label for="character-amount-number">Number of Characters</label>
-            <div class="select-length">
+            <div class="select-length flex">
               <input
                 id="character-amount-range"
                 type="range"
@@ -35,7 +35,7 @@
                 min="8"
                 data-length-range
               />
-              <div class="number-input-container">
+              <div class="number-input-container flex">
                 <button
                   type="button"
                   class="spinner-btn"
@@ -66,7 +66,7 @@
           </div>
 
           <div class="options">
-            <div class="uppercase-container">
+            <div class="uppercase-container flex">
               <label for="uppercase-chars">Include UpperCase Letters</label>
               <input
                 type="checkbox"
@@ -74,11 +74,11 @@
                 data-uppercase-chars
               />
             </div>
-            <div class="numbers-container">
+            <div class="numbers-container flex">
               <label for="numbers">Include Numbers</label>
               <input type="checkbox" id="numbers" data-number-chars />
             </div>
-            <div class="special-chars-container">
+            <div class="special-chars-container flex">
               <label for="special-chars">Include Special Characters</label>
               <input type="checkbox" id="special-chars" data-special-chars />
             </div>
