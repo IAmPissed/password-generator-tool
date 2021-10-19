@@ -17,15 +17,16 @@
   h1 {
     text-align: center;
     letter-spacing: 2px;
-    font-weight: 400;
+    font-weight: bold;
     font-size: 1.85rem;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .password-display {
     width: 90%;
     background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 1rem auto 2.3rem auto;
     border-radius: 2px;
     color: #333;
@@ -49,11 +50,8 @@
       bottom: 0%;
       height: 100%;
       width: 4rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       cursor: pointer;
-      background-color: $clrFive;
+      background: $clrFour;
       border-top-right-radius: 2px;
       border-bottom-right-radius: 2px;
     }
@@ -73,24 +71,15 @@
 }
 
 .form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 
   .length {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 90%;
     margin-bottom: 0.8rem;
     font-size: 1.06rem;
 
     .select-length {
-      display: flex;
-      align-items: center;
-      margin-left: 1rem;
-
       #character-amount-number {
         text-align: center;
         padding: 0.25rem 0.1rem;
@@ -107,7 +96,7 @@
       }
 
       .number-input-container {
-        display: flex;
+        align-items: stretch;
         margin-left: 0.5rem;
 
         #decrease {
@@ -137,10 +126,12 @@
     width: 90%;
   }
   .options > div {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     margin-bottom: 0.6rem;
+
+    input[type="checkbox"] {
+      transform: scale(1.5);
+    }
   }
   label {
     font-weight: 500;
@@ -167,10 +158,8 @@
 
 @media screen and(max-width:600px) {
   .length {
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
 
   .container {

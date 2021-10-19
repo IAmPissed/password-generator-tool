@@ -56,6 +56,18 @@ body {
   font-family: "Roboto mono", monospace;
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .container {
   width: 95vw;
   max-width: 700px;
@@ -72,22 +84,17 @@ body {
 .container h1 {
   text-align: center;
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: bold;
   font-size: 1.85rem;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .container .password-display {
   width: 90%;
   background: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 1rem auto 2.3rem auto;
   border-radius: 2px;
   color: #333;
@@ -112,17 +119,8 @@ body {
   bottom: 0%;
   height: 100%;
   width: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   cursor: pointer;
-  background-color: #bdffed;
+  background: #ccffff;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
@@ -141,15 +139,6 @@ body {
 }
 
 .form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -157,28 +146,12 @@ body {
 }
 
 .form .length {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 90%;
   margin-bottom: 0.8rem;
   font-size: 1.06rem;
-}
-
-.form .length .select-length {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 1rem;
 }
 
 .form .length .select-length #character-amount-number {
@@ -197,9 +170,9 @@ body {
 }
 
 .form .length .select-length .number-input-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   margin-left: 0.5rem;
 }
 
@@ -228,16 +201,15 @@ body {
 }
 
 .form .options > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 0.6rem;
+}
+
+.form .options > div input[type="checkbox"] {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .form label {
@@ -267,9 +239,6 @@ body {
 
 @media screen and (max-width: 600px) {
   .length {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -277,9 +246,6 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .container .password-display .password {
     font-size: small;
