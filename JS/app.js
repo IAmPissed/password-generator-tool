@@ -16,8 +16,8 @@
 // grab clipboard element X
 
 
-// reference to increase and decrease buttons
-// create a function to increase or decrease the value of character amount number based on the button that is clicked
+// reference to increase and decrease buttons X
+// create function to increase and decrease the value of character amount number based on the button that is clicked
 
 const passwordDisplay = document.querySelector('[data-password-display]');
 const form = document.querySelector('[data-form]');
@@ -42,6 +42,8 @@ function increaseCharAmount() {
         numberOfCharacters.value++;
     }
     document.getElementById('character-amount-range').value++
+
+
 }
 
 function decreaseCharAmount() {
